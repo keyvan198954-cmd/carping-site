@@ -1,0 +1,259 @@
+﻿<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CarPing — Your Car. Always Connected.</title>
+  <meta name="description" content="CarPing lets others reach you with important alerts about your car — without sharing your phone number, identity or personal information.">
+  <meta name="theme-color" content="#061633">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <meta property="og:title" content="CarPing — Your Car. Always Connected.">
+  <meta property="og:description" content="Scan the card on a car, send a ready alert, and the owner gets it instantly — no phone numbers shared.">
+  <meta property="og:image" content="assets/mark-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 4.5 5.6v5.7c0 4.6 3.1 8.1 7.5 9.9 4.4-1.8 7.5-5.3 7.5-9.9V5.6L12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.6 11.9 2.4 2.4 4.5-4.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6.2 16.8V11a5.8 5.8 0 0 1 11.6 0v5.8l1.6 1.7H4.6l1.6-1.7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M10 20.4a2.2 2.2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><path d="M4 8.2V5.6A1.6 1.6 0 0 1 5.6 4h2.6M15.8 4h2.6A1.6 1.6 0 0 1 20 5.6v2.6M20 15.8v2.6a1.6 1.6 0 0 1-1.6 1.6h-2.6M8.2 20H5.6A1.6 1.6 0 0 1 4 18.4v-2.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><rect x="7.8" y="7.8" width="3" height="3" rx=".5" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="13.2" y="7.8" width="3" height="3" rx=".5" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="7.8" y="13.2" width="3" height="3" rx=".5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M13.4 13.4h2.8v2.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-nophone" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5.9 18.1 18.1 5.9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9.4 8.4c-.6.3-.9 1-.6 1.9.7 2 2.3 3.7 4.4 4.6.7.3 1.4 0 1.7-.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 11.2 6.9 6.6A1.9 1.9 0 0 1 8.7 5.4h6.6a1.9 1.9 0 0 1 1.8 1.2L19 11.2c1 .3 1.6 1.2 1.6 2.3v3.1c0 .5-.4.9-.9.9h-1.5a.9.9 0 0 1-.9-.9v-.7H6.7v.7a.9.9 0 0 1-.9.9H4.3a.9.9 0 0 1-.9-.9v-3.1c0-1.1.6-2 1.6-2.3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.6" cy="14" r="1" fill="currentColor"/><circle cx="16.4" cy="14" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.6 12h16.8M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6s1.2-6.2 3.6-8.6Z" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m10 8.6 5.2 3.4-5.2 3.4V8.6Z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13M13 6.6 18.4 12 13 17.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 5.4h14a1.6 1.6 0 0 1 1.6 1.6v8.2a1.6 1.6 0 0 1-1.6 1.6h-7.2L8 20.4v-3.6H5A1.6 1.6 0 0 1 3.4 15.2V7A1.6 1.6 0 0 1 5 5.4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-reply" viewBox="0 0 24 24"><path d="m9.6 6.2-5 5 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.8 11.2h8.4a6 6 0 0 1 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.4" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.4 19c.3-3 2.7-5 5.6-5s5.3 2 5.6 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15.4 5.6a3 3 0 0 1 0 5.6M17.6 14.4c1.8.6 3 2.3 3.2 4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.4" width="16" height="14.6" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 10h16M8.4 3.6v3.2M15.6 3.6v3.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m9.4 14.6 1.7 1.7 3.5-3.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3.2 12.4h4l2.2-5.2 3.6 10.2 2.4-5h5.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M5 9h13M14.4 5.4 18 9l-3.6 3.6M19 15H6M9.6 11.4 6 15l3.6 3.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3.4" y="5.6" width="17.2" height="12.8" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.8 10h16.4" stroke="currentColor" stroke-width="1.6"/><path d="M7 14.6h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.6 5.8h2.8M11 18.2h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5.5 12.6 4.2 4.2 8.8-9.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap nav__bar">
+    <a class="brand" href="#home" aria-label="CarPing">
+      <img class="brand__mark" src="assets/mark-192.png" width="46" height="46" alt="" aria-hidden="true">
+      <span class="brand__word">Car<span>Ping</span></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <a href="#home" class="is-active" data-i18n="nav_home">Home</a>
+      <a href="#features" data-i18n="nav_features">Features</a>
+      <a href="#how" data-i18n="nav_how">How It Works</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#support" data-i18n="nav_support">Support</a>
+    </nav>
+    <div class="nav__tools">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="fa" aria-pressed="false">فا</button>
+        <button type="button" data-lang="ar" aria-pressed="false">ع</button>
+      </div>
+      <a class="btn btn--primary btn--sm nav__cta" href="#get-card"><span data-i18n="cta_card">Get Your Card</span><svg class="ico flip"><use href="#i-arrow"/></svg></a>
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__sky" aria-hidden="true"></div>
+  <div class="hero__arc" aria-hidden="true"></div>
+  <div class="hero__floor" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow" data-i18n="hero_eyebrow">Smarter • Safer • Connected</p>
+      <h1 data-i18n-html="hero_title">Your Car.<br>Always <span>Connected.</span></h1>
+      <p class="lead" data-i18n="hero_lead">CarPing lets others reach you with important alerts — without sharing your phone number, identity or personal information.</p>
+      <ul class="chips">
+        <li><svg class="ico"><use href="#i-shield"/></svg><span data-i18n="chip_privacy">Protects<br>Your Privacy</span></li>
+        <li><svg class="ico"><use href="#i-bell"/></svg><span data-i18n="chip_alerts">Quick<br>Alerts</span></li>
+        <li><svg class="ico"><use href="#i-qr"/></svg><span data-i18n="chip_qr">Simple<br>QR Scan</span></li>
+        <li><svg class="ico"><use href="#i-nophone"/></svg><span data-i18n="chip_nophone">No Phone<br>Sharing</span></li>
+      </ul>
+      <div class="hero__cta">
+        <a class="btn btn--primary btn--lg" href="#get-card"><span data-i18n="cta_card">Get Your Card</span><svg class="ico flip"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost btn--lg" href="#how"><svg class="ico"><use href="#i-play"/></svg><span data-i18n="cta_how">See How It Works</span></a>
+      </div>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <div class="phone">
+        <div class="phone__screen">
+          <div class="phone__status"><b>9:41</b><i></i></div>
+          <div class="phone__body">
+            <img class="phone__mark" src="assets/mark-192.png" width="92" height="92" alt="">
+            <div class="phone__word">Car<span>Ping</span></div>
+            <div class="phone__tag" data-i18n="phone_tag">Scan. Alert. Stay Safe.</div>
+          </div>
+          <div class="phone__tabs">
+            <span><svg class="ico"><use href="#i-bell"/></svg><em data-i18n="tab_alerts">Alerts</em></span>
+            <span><svg class="ico"><use href="#i-car"/></svg><em data-i18n="tab_vehicles">Vehicles</em></span>
+            <span><svg class="ico"><use href="#i-pulse"/></svg><em data-i18n="tab_settings">Settings</em></span>
+          </div>
+        </div>
+      </div>
+      <div class="tag-card">
+        <div class="tag-card__top"><img class="tag-card__mark" src="assets/mark-192.png" width="34" height="34" alt=""><b>Car<span>Ping</span></b></div>
+        <div class="tag-card__qr" id="heroQr"></div>
+        <p data-i18n="card_text">Scan for important info and alerts</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<section class="strip">
+  <div class="wrap strip__grid">
+    <div class="strip__item"><svg class="ico ico--lg"><use href="#i-car"/></svg><div><b data-i18n="strip1_t">For Every Vehicle</b><small data-i18n="strip1_s">Cars • SUVs • Trucks • More</small></div></div>
+    <div class="strip__item"><svg class="ico ico--lg"><use href="#i-globe"/></svg><div><b data-i18n="strip2_t">Works Anywhere</b><small data-i18n="strip2_s">Scan • Alert • Stay Connected</small></div></div>
+    <div class="strip__item"><svg class="ico ico--lg"><use href="#i-shield"/></svg><div><b data-i18n="strip3_t">Your Privacy Matters</b><small data-i18n="strip3_s">No Phone • No Personal Info • No Problem</small></div></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow" data-i18n="f_eyebrow">Features</p>
+      <h2 data-i18n="f_title">Everything you need. Nothing you don't.</h2>
+      <p class="lead" data-i18n="f_lead">Built for real parking-lot problems — lights left on, a blocked driveway, a flat tyre — and for the rare emergency.</p>
+    </header>
+    <div class="cards">
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-nophone"/></svg></span><h3 data-i18n="f1_t">Privacy first</h3><p data-i18n="f1_p">No phone number on your windshield. Neither side ever sees the other's number.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-qr"/></svg></span><h3 data-i18n="f2_t">No app for the sender</h3><p data-i18n="f2_p">Whoever scans the card picks a language and one of 18 ready sentences in 5 categories. No sign-up, no account.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-bell"/></svg></span><h3 data-i18n="f3_t">Instant alerts, your language</h3><p data-i18n="f3_p">A push notification in your own language, naming your vehicle and plate — urgent ones come with a loud alert.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-reply"/></svg></span><h3 data-i18n="f4_t">One-tap reply</h3><p data-i18n="f4_p">Answer with a ready sentence and the sender sees it on the same page. No free text, no arguments.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-users"/></svg></span><h3 data-i18n="f5_t">Alert helpers</h3><p data-i18n="f5_p">If you don't answer in time, up to two people you trust get the alert. Only urgent alerts escalate.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-calendar"/></svg></span><h3 data-i18n="f6_t">Smart reminders</h3><p data-i18n="f6_p">Third-party and body insurance, technical inspection, oil change and service — a quiet nudge before each is due.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-swap"/></svg></span><h3 data-i18n="f7_t">Many vehicles, one app</h3><p data-i18n="f7_p">Add every car you own. Selling one? Release the card and the new owner claims it by scanning the same code.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-globe"/></svg></span><h3 data-i18n="f8_t">8 languages, 28 countries</h3><p data-i18n="f8_p">Persian, English, Arabic, Turkish, Kurdish (Sorani), Azerbaijani, Turkmen and Armenian — right-to-left included.</p></article>
+    </div>
+
+    <div class="spot reveal">
+      <div class="spot__ico"><svg class="ico ico--xl"><use href="#i-pulse"/></svg></div>
+      <div class="spot__txt">
+        <p class="eyebrow" data-i18n="e_eyebrow">Optional · Emergency mode</p>
+        <h3 data-i18n="e_title">When it's more than a parking problem</h3>
+        <p data-i18n="e_p">A bystander can raise an emergency from the scan page. You are alerted first; if you don't respond within a short window, your two close contacts are reached. Your medical card is opt-in, encrypted, and every view is logged.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--alt" id="how">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <p class="eyebrow" data-i18n="h_eyebrow">How it works</p>
+      <h2 data-i18n="h_title">Three steps. Zero phone numbers.</h2>
+    </header>
+    <ol class="steps">
+      <li class="step reveal"><span class="step__n">1</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-card"/></svg></span><h3 data-i18n="s1_t">Put the card on your car</h3><p data-i18n="s1_p">Stick the CarPing card on the windshield or dashboard and register it once in the app by scanning its code.</p></li>
+      <li class="step reveal"><span class="step__n">2</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-qr"/></svg></span><h3 data-i18n="s2_t">Someone scans it</h3><p data-i18n="s2_p">A web page opens — no app needed. They choose a language and a ready message, like "lights left on".</p></li>
+      <li class="step reveal"><span class="step__n">3</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-phone"/></svg></span><h3 data-i18n="s3_t">You get the alert</h3><p data-i18n="s3_p">Your phone buzzes with the message and your vehicle's name. Reply with one tap — your number stays private.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about__copy reveal">
+      <p class="eyebrow" data-i18n="a_eyebrow">About CarPing</p>
+      <h2 data-i18n="a_title">Reachable, without being exposed.</h2>
+      <p data-i18n="a_p1">A phone number behind the windshield invites strangers and unwanted calls. Without one, nobody can tell you that your lights are on or that you've been blocked in.</p>
+      <p data-i18n="a_p2">CarPing keeps both promises: people can reach you in seconds, and your number, name and address stay yours. It was designed for the Middle East and beyond, in the languages people actually speak.</p>
+      <ul class="ticks">
+        <li><svg class="ico"><use href="#i-check"/></svg><span data-i18n="a_t1">No sign-up, no login, no password</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span data-i18n="a_t2">Fixed sentences instead of free text — no abuse, no translation mistakes</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span data-i18n="a_t3">Cards you can suspend, replace or revoke at any time</span></li>
+      </ul>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><b>18</b><span data-i18n="st1">ready alert sentences</span></div>
+      <div class="stat"><b>8</b><span data-i18n="st2">app languages</span></div>
+      <div class="stat"><b>28</b><span data-i18n="st3">countries supported</span></div>
+      <div class="stat"><b>0</b><span data-i18n="st4">phone numbers shared</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GET YOUR CARD -->
+<section class="section section--alt" id="get-card">
+  <div class="wrap cta">
+    <div class="cta__copy reveal">
+      <p class="eyebrow" data-i18n="g_eyebrow">Get started</p>
+      <h2 data-i18n="g_title">Get your CarPing card</h2>
+      <p class="lead" data-i18n="g_lead">The first cards are being prepared. Leave your details and we'll get back to you with availability and pricing.</p>
+      <div class="stores">
+        <span class="store" aria-disabled="true"><svg class="ico"><use href="#i-phone"/></svg><span><small data-i18n="store_soon">Coming soon</small><b>Google Play</b></span></span>
+        <span class="store" aria-disabled="true"><svg class="ico"><use href="#i-phone"/></svg><span><small data-i18n="store_soon2">Coming soon</small><b>App Store</b></span></span>
+      </div>
+    </div>
+    <form class="form reveal" id="cardForm" novalidate>
+      <label><span data-i18n="fm_name">Your name</span><input name="name" type="text" autocomplete="name" required></label>
+      <label><span data-i18n="fm_contact">Email or WhatsApp number</span><input name="contact" type="text" autocomplete="email" required></label>
+      <div class="form__row">
+        <label><span data-i18n="fm_country">Country</span><input name="country" type="text" autocomplete="country-name"></label>
+        <label><span data-i18n="fm_cars">How many cards?</span><input name="count" type="number" min="1" max="10000" value="1"></label>
+      </div>
+      <label><span data-i18n="fm_msg">Message (optional)</span><textarea name="message" rows="3"></textarea></label>
+      <button class="btn btn--primary btn--lg" type="submit"><span data-i18n="fm_send">Request my card</span><svg class="ico flip"><use href="#i-arrow"/></svg></button>
+      <p class="form__note" id="formNote" role="status" data-i18n="fm_note">This opens your email app with the details filled in.</p>
+    </form>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="section" id="support">
+  <div class="wrap support">
+    <header class="section__head reveal">
+      <p class="eyebrow" data-i18n="q_eyebrow">Support</p>
+      <h2 data-i18n="q_title">Questions, answered</h2>
+    </header>
+    <div class="faq reveal">
+      <details><summary data-i18n="q1">Do I have to give my phone number?</summary><p data-i18n="a1">No. The app creates your owner record silently on first start — there is no sign-up, login or password, and the person who scans never sees your number.</p></details>
+      <details><summary data-i18n="q2">Does the person who scans need the app?</summary><p data-i18n="a2">No. They open a web page in their own language, pick a ready sentence and send it. That's all.</p></details>
+      <details><summary data-i18n="q3">What if the card is lost or stolen?</summary><p data-i18n="a3">Suspend it from the app in one tap, activate it again if you find it, or replace it with a new card. A revoked card stops working for good.</p></details>
+      <details><summary data-i18n="q4">I'm selling my car. What happens to the card?</summary><p data-i18n="a4">Release it in the app. The new owner scans the same code and claims it. Nothing needs to be re-printed.</p></details>
+      <details><summary data-i18n="q5">What does emergency mode share?</summary><p data-i18n="a5">Nothing, unless you turn it on. When you do, your medical card and two close contacts are stored encrypted, you are always alerted first, and every view of your data is logged.</p></details>
+      <details><summary data-i18n="q6">Which countries and languages are supported?</summary><p data-i18n="a6">28 countries — the Arab League states plus Iran, Türkiye, Afghanistan, Azerbaijan, Armenia and Turkmenistan — and 8 languages.</p></details>
+    </div>
+    <div class="contact reveal">
+      <h3 data-i18n="c_title">Still need help?</h3>
+      <p data-i18n="c_p">Write to us and we'll reply as soon as we can.</p>
+      <a class="btn btn--ghost" id="mailLink" href="mailto:hello@carping.app"><svg class="ico"><use href="#i-chat"/></svg><span id="mailText">hello@carping.app</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__bar">
+    <a class="brand brand--sm" href="#home" aria-label="CarPing"><img class="brand__mark" src="assets/mark-192.png" width="46" height="46" alt="" aria-hidden="true"><span class="brand__word">Car<span>Ping</span></span></a>
+    <p class="foot__tag" data-i18n="foot_tag">Your Car. Always Connected.</p>
+    <p class="foot__copy">© <span id="year">2026</span> CarPing</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
+
