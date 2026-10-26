@@ -38,6 +38,10 @@
     <symbol id="i-card" viewBox="0 0 24 24"><rect x="3.4" y="5.6" width="17.2" height="12.8" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.8 10h16.4" stroke="currentColor" stroke-width="1.6"/><path d="M7 14.6h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.6 5.8h2.8M11 18.2h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5.5 12.6 4.2 4.2 8.8-9.2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M5.6 18.4l1.7-1.7M16.7 7.3l1.7-1.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.4" width="14" height="9.6" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.2 10.4V8a3.8 3.8 0 0 1 7.6 0v2.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="15.2" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4.2 21 19.6H3L12 4.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="16.9" r="1.05" fill="currentColor"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.6 11 12 15.4 16.4 11M5 19.4h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </defs>
 </svg>
 
@@ -52,6 +56,7 @@
       <a href="#features" data-i18n="nav_features">Features</a>
       <a href="#how" data-i18n="nav_how">How It Works</a>
       <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#get-card" data-i18n="nav_shop">Buy a Card</a>
       <a href="#support" data-i18n="nav_support">Support</a>
     </nav>
     <div class="nav__tools">
@@ -90,37 +95,22 @@
       </div>
     </div>
 
-    <div class="hero__art" aria-hidden="true">
-      <div class="phone">
-        <div class="phone__screen">
-          <div class="phone__status"><b>9:41</b><i></i></div>
-          <div class="phone__body">
-            <img class="phone__mark" src="assets/mark-192.png" width="92" height="92" alt="">
-            <div class="phone__word">Car<span>Ping</span></div>
-            <div class="phone__tag" data-i18n="phone_tag">Scan. Alert. Stay Safe.</div>
-          </div>
-          <div class="phone__tabs">
-            <span><svg class="ico"><use href="#i-bell"/></svg><em data-i18n="tab_alerts">Alerts</em></span>
-            <span><svg class="ico"><use href="#i-car"/></svg><em data-i18n="tab_vehicles">Vehicles</em></span>
-            <span><svg class="ico"><use href="#i-pulse"/></svg><em data-i18n="tab_settings">Settings</em></span>
-          </div>
-        </div>
-      </div>
-      <div class="tag-card">
-        <div class="tag-card__top"><img class="tag-card__mark" src="assets/mark-192.png" width="34" height="34" alt=""><b>Car<span>Ping</span></b></div>
-        <div class="tag-card__qr" id="heroQr"></div>
-        <p data-i18n="card_text">Scan for important info and alerts</p>
-      </div>
+    <div class="hero__art">
+      <figure class="photo">
+        <img src="assets/card-photo.jpg" width="1536" height="1024" alt="A CarPing card behind a car windshield with its QR code" fetchpriority="high">
+        <figcaption data-i18n="hero_note">Scan • Send a ready message • Stay safe</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- STRIP -->
-<section class="strip">
-  <div class="wrap strip__grid">
-    <div class="strip__item"><svg class="ico ico--lg"><use href="#i-car"/></svg><div><b data-i18n="strip1_t">For Every Vehicle</b><small data-i18n="strip1_s">Cars • SUVs • Trucks • More</small></div></div>
-    <div class="strip__item"><svg class="ico ico--lg"><use href="#i-globe"/></svg><div><b data-i18n="strip2_t">Works Anywhere</b><small data-i18n="strip2_s">Scan • Alert • Stay Connected</small></div></div>
-    <div class="strip__item"><svg class="ico ico--lg"><use href="#i-shield"/></svg><div><b data-i18n="strip3_t">Your Privacy Matters</b><small data-i18n="strip3_s">No Phone • No Personal Info • No Problem</small></div></div>
+<!-- USES -->
+<section class="uses">
+  <div class="wrap uses__grid">
+    <div class="use use--blue"><span class="use__ico"><svg class="ico"><use href="#i-car"/></svg></span><div><b data-i18n="u1_t">Parked wrongly?</b><small data-i18n="u1_s">Let them know</small></div></div>
+    <div class="use use--amber"><span class="use__ico"><svg class="ico"><use href="#i-sun"/></svg></span><div><b data-i18n="u2_t">Lights left on?</b><small data-i18n="u2_s">Warn them</small></div></div>
+    <div class="use use--green"><span class="use__ico"><svg class="ico"><use href="#i-lock"/></svg></span><div><b data-i18n="u3_t">Door open or a problem?</b><small data-i18n="u3_s">Let them know</small></div></div>
+    <div class="use use--red"><span class="use__ico"><svg class="ico"><use href="#i-alert"/></svg></span><div><b data-i18n="u4_t">Accident or damage?</b><small data-i18n="u4_s">Tell them</small></div></div>
   </div>
 </section>
 
@@ -162,9 +152,10 @@
       <h2 data-i18n="h_title">Three steps. Zero phone numbers.</h2>
     </header>
     <ol class="steps">
-      <li class="step reveal"><span class="step__n">1</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-card"/></svg></span><h3 data-i18n="s1_t">Put the card on your car</h3><p data-i18n="s1_p">Stick the CarPing card on the windshield or dashboard and register it once in the app by scanning its code.</p></li>
-      <li class="step reveal"><span class="step__n">2</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-qr"/></svg></span><h3 data-i18n="s2_t">Someone scans it</h3><p data-i18n="s2_p">A web page opens — no app needed. They choose a language and a ready message, like "lights left on".</p></li>
-      <li class="step reveal"><span class="step__n">3</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-phone"/></svg></span><h3 data-i18n="s3_t">You get the alert</h3><p data-i18n="s3_p">Your phone buzzes with the message and your vehicle's name. Reply with one tap — your number stays private.</p></li>
+      <li class="step reveal"><span class="step__n">1</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-card"/></svg></span><h3 data-i18n="s1_t">Stick the card on your car</h3><p data-i18n="s1_p">Put the CarPing card behind the windshield and register it once in the app by scanning its QR code.</p></li>
+      <li class="step reveal"><span class="step__n">2</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-qr"/></svg></span><h3 data-i18n="s2_t">Someone scans it</h3><p data-i18n="s2_p">Anyone near your car scans the QR with their phone camera. A web page opens in their language — no app, no sign-up.</p></li>
+      <li class="step reveal"><span class="step__n">3</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-chat"/></svg></span><h3 data-i18n="s3_t">They pick a ready message</h3><p data-i18n="s3_p">One of 18 ready sentences in 5 categories, like "lights left on". No free text, no arguments.</p></li>
+      <li class="step reveal"><span class="step__n">4</span><span class="step__ico"><svg class="ico ico--lg"><use href="#i-phone"/></svg></span><h3 data-i18n="s4_t">You get the alert</h3><p data-i18n="s4_p">Your phone shows the message and your vehicle's name — loud when it is urgent. Reply with one tap; your number stays private.</p></li>
     </ol>
   </div>
 </section>
@@ -185,9 +176,27 @@
     </div>
     <div class="stats reveal">
       <div class="stat"><b>18</b><span data-i18n="st1">ready alert sentences</span></div>
-      <div class="stat"><b>8</b><span data-i18n="st2">app languages</span></div>
-      <div class="stat"><b>28</b><span data-i18n="st3">countries supported</span></div>
+      <div class="stat"><b>18</b><span data-i18n="st2">app languages</span></div>
+      <div class="stat"><b>200+</b><span data-i18n="st3">countries supported</span></div>
       <div class="stat"><b>0</b><span data-i18n="st4">phone numbers shared</span></div>
+    </div>
+  </div>
+  <div class="wrap why">
+    <header class="section__head reveal">
+      <p class="eyebrow" data-i18n="w_eyebrow">Why CarPing</p>
+      <h2 data-i18n="w_title">Better than a phone number on the glass</h2>
+    </header>
+    <div class="cards cards--4">
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-nophone"/></svg></span><h3 data-i18n="w1_t">Your number stays yours</h3><p data-i18n="w1_p">A number on the windshield invites strangers and unwanted calls. CarPing shows nothing personal.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-globe"/></svg></span><h3 data-i18n="w2_t">No shared language needed</h3><p data-i18n="w2_p">The sender reads the page in their language and you get the alert in yours, with fixed sentences instead of free text.</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-bell"/></svg></span><h3 data-i18n="w3_t">Hard to miss</h3><p data-i18n="w3_p">A push notification naming your vehicle; urgent alerts come with a loud sound, even on a silent phone (Android).</p></article>
+      <article class="card reveal"><span class="card__ico"><svg class="ico"><use href="#i-pulse"/></svg></span><h3 data-i18n="w4_t">Ready for emergencies</h3><p data-i18n="w4_p">An optional emergency mode alerts you first and then the people you trust — your medical card stays encrypted.</p></article>
+    </div>
+    <div class="who reveal">
+      <h3 data-i18n="who_title">Made for everyone who parks</h3>
+      <ul class="who__list">
+        <li data-i18n="who1">City drivers</li><li data-i18n="who2">Taxis &amp; ride agencies</li><li data-i18n="who3">Parking lots &amp; residential complexes</li><li data-i18n="who4">Car rental</li><li data-i18n="who5">Families</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -196,15 +205,53 @@
 <section class="section section--alt" id="get-card">
   <div class="wrap cta">
     <div class="cta__copy reveal">
-      <p class="eyebrow" data-i18n="g_eyebrow">Get started</p>
+      <p class="eyebrow" data-i18n="g_eyebrow">Buy a card</p>
       <h2 data-i18n="g_title">Get your CarPing card</h2>
-      <p class="lead" data-i18n="g_lead">The first cards are being prepared. Leave your details and we'll get back to you with availability and pricing.</p>
+      <p class="lead" data-i18n="g_lead">Order online and receive your card code right after payment: a unique QR you can save or print, then register in the app.</p>
+      <ul class="ticks">
+        <li><svg class="ico"><use href="#i-check"/></svg><span data-i18n="shop_b1">Code delivered instantly after payment</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span data-i18n="shop_b2">One QR per car — register it in the app by scanning</span></li>
+        <li><svg class="ico"><use href="#i-check"/></svg><span data-i18n="shop_b3">Suspend, replace or hand it over to a new owner anytime</span></li>
+      </ul>
       <div class="stores">
         <span class="store" aria-disabled="true"><svg class="ico"><use href="#i-phone"/></svg><span><small data-i18n="store_soon">Coming soon</small><b>Google Play</b></span></span>
         <span class="store" aria-disabled="true"><svg class="ico"><use href="#i-phone"/></svg><span><small data-i18n="store_soon2">Coming soon</small><b>App Store</b></span></span>
       </div>
     </div>
+
+    <div class="shop reveal" id="shop" hidden>
+      <!-- 1. order form -->
+      <form class="form" id="orderForm" novalidate>
+        <div class="shop__price"><span data-i18n="shop_price">Price per card</span><b id="shopUnit">—</b></div>
+        <label><span data-i18n="fm_name">Your name</span><input name="name" type="text" autocomplete="name" maxlength="120" required></label>
+        <label><span data-i18n="fm_contact">Email or WhatsApp number</span><input name="contact" type="text" autocomplete="email" maxlength="200" required></label>
+        <label><span data-i18n="shop_qty">How many cards?</span><input name="quantity" id="shopQty" type="number" min="1" max="10" value="1" inputmode="numeric"></label>
+        <div class="shop__price shop__price--total"><span data-i18n="shop_total">Total</span><b id="shopTotal">—</b></div>
+        <button class="btn btn--primary btn--lg" type="submit" id="orderBtn"><span data-i18n="shop_order">Place order</span><svg class="ico flip"><use href="#i-arrow"/></svg></button>
+        <p class="form__note" id="orderNote" role="status"></p>
+      </form>
+
+      <!-- 2. order placed: pay / deliver -->
+      <div class="form" id="orderPanel" hidden>
+        <div class="shop__ref"><span data-i18n="shop_ref">Order reference</span><b id="orderRef" dir="ltr">—</b></div>
+        <p class="form__note" data-i18n="shop_keep_ref">Keep this reference — it is how support finds your order.</p>
+        <div class="shop__price"><span data-i18n="shop_total">Total</span><b id="orderTotal">—</b></div>
+        <p class="shop__state" id="orderState" role="status"></p>
+        <button class="btn btn--primary btn--lg" type="button" id="payBtn" hidden><span data-i18n="shop_pay_test">Pay now (test mode — no real money)</span></button>
+        <button class="btn btn--ghost" type="button" id="cancelBtn" hidden><span data-i18n="shop_cancel">Cancel this order</span></button>
+        <p class="form__note" id="payNone" data-i18n="shop_pay_none" hidden>Online payment is not open yet. Your order is saved and we will contact you with the payment details.</p>
+        <button class="btn btn--primary btn--lg" type="button" id="getCodeBtn" hidden><span data-i18n="shop_get_code">Show my card code</span></button>
+        <p class="form__note form__note--warn" id="cancelledNote" data-i18n="shop_cancelled_note" hidden>This order was cancelled. If you paid, our team will refund you — write to support with the order reference.</p>
+        <p class="form__note form__note--warn" id="goneNote" data-i18n="shop_gone" hidden>The codes of this order were already shown. If you lost them, write to support with the order reference.</p>
+        <p class="form__note" id="panelNote" role="status"></p>
+        <div id="codes" class="codes"></div>
+        <button class="btn btn--ghost" type="button" id="newOrderBtn"><span data-i18n="shop_new">New order</span></button>
+      </div>
+    </div>
+
+    <!-- fallback while the online shop is not open: the old request form (opens the visitor's mail app) -->
     <form class="form reveal" id="cardForm" novalidate>
+      <p class="form__note" data-i18n="shop_unavailable">Online ordering is not open yet — leave your details and we will get back to you.</p>
       <label><span data-i18n="fm_name">Your name</span><input name="name" type="text" autocomplete="name" required></label>
       <label><span data-i18n="fm_contact">Email or WhatsApp number</span><input name="contact" type="text" autocomplete="email" required></label>
       <div class="form__row">
@@ -232,6 +279,9 @@
       <details><summary data-i18n="q4">I'm selling my car. What happens to the card?</summary><p data-i18n="a4">Release it in the app. The new owner scans the same code and claims it. Nothing needs to be re-printed.</p></details>
       <details><summary data-i18n="q5">What does emergency mode share?</summary><p data-i18n="a5">Nothing, unless you turn it on. When you do, your medical card and two close contacts are stored encrypted, you are always alerted first, and every view of your data is logged.</p></details>
       <details><summary data-i18n="q6">Which countries and languages are supported?</summary><p data-i18n="a6">28 countries — the Arab League states plus Iran, Türkiye, Afghanistan, Azerbaijan, Armenia and Turkmenistan — and 8 languages.</p></details>
+      <details><summary data-i18n="q7">How do I get my card after paying?</summary><p data-i18n="a7">Right after payment the page shows your card code once, as a QR. Save or print it, then scan it in the CarPing app to register your car.</p></details>
+      <details><summary data-i18n="q8">I lost my code — what now?</summary><p data-i18n="a8">The code is shown only once and is not stored, for your safety. Write to support with your order reference and we will help.</p></details>
+      <details><summary data-i18n="q9">Which phones does the app run on?</summary><p data-i18n="a9">Android now; iPhone is coming. The person who scans needs no app on any phone.</p></details>
     </div>
     <div class="contact reveal">
       <h3 data-i18n="c_title">Still need help?</h3>
@@ -247,6 +297,7 @@
   <div class="wrap foot__bar">
     <a class="brand brand--sm" href="#home" aria-label="CarPing"><img class="brand__mark" src="assets/mark-192.png" width="46" height="46" alt="" aria-hidden="true"><span class="brand__word">Car<span>Ping</span></span></a>
     <p class="foot__tag" data-i18n="foot_tag">Your Car. Always Connected.</p>
+    <p class="foot__tag" data-i18n="foot_note">Android now · iPhone soon</p>
     <p class="foot__copy">© <span id="year">2026</span> CarPing</p>
   </div>
 </footer>
